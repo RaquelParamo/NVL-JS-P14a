@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>NVL-JS-P14a</title>
+ </head>
+ <body>
+   <h1>Pelis</h1>
+   <section>
+   <ul id ="pelis">
+   </ul>
+   <script>
+   	var pelis = [
+       {
+    "Nombre": "Regreso al futuro",
+    "Genero":"Acción"
+    },
+    {
+    "Nombre":"Los increibles 2",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Los increibles 1",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y la piedra filosofal",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y la cámara secreta",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y el Prisionero de Azkaban",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y el cáliz de fuego",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y la orden del Fénix",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y el misterio del príncipe",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y las reliquias de la muerte: Parte I",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Harry Potter y las reliquias de la muerte: Parte II",
+    "Genero":"Animación",
+    },
+    {
+    "Nombre":"El jovencito Frankenstein",
+    "Genero":"Animación",
+    },
+    {
+    "Nombre":"El resplandor",
+    "Genero":"Terror"
+    },
+    {
+    "Nombre":"La naranja mecánica",
+    "Genero":"Terror"
+    },
+    {
+    "Nombre":"Charada",
+    "Genero":"Intriga"
+    },
+    {
+    "Nombre":"Desayuno con diamantes",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Psicosis",
+    "Genero":"Terror"
+    },
+    {
+    "Nombre":"Alguien voló sobre el nido del cuco",
+    "Genero":"Drama"
+    },
+    {
+    "Nombre":"Lost in translation",
+    "Genero":"Animación"
+    },
+    {
+    "Nombre":"Olvídate de mí",
+    "Genero":"Drama"
+    },
+    {
+    "Nombre":"It",
+    "Genero":"Terror"
+    },
+    {
+    "Nombre":"Insidious",
+    "Genero":"Terror"
+    },
+    {
+    "Nombre": "Expediente Warren",
+    "Genero": "Terror"
+    }
+];
+	var ulObjectivo = document.querySelector('#pelis');
+		for (var x = 0 ; x < pelis.length ; x++) {
+		var li = document.createElement("li");
+		li.textContent = pelis[x].Nombre;
+		
+		var img = document.createElement("img");
+		img.width=50;
+		img.height = 50;
+		if (pelis[x].Genero == "Animación" ) {
+			img.src = "https://cdn3.iconfinder.com/data/icons/movies-3/32/shrek-character-animation-movie-ogre-512.png";
+			img.alt= "animacion";
+		} else if (pelis[x].Genero == "Acción" ) {
+			img.src = "https://image.freepik.com/vector-gratis/golpe-puno-cerrado-golpe_98292-3947.jpg";
+			img.alt= "accion";
+		} else if (pelis[x].Genero == "Suspense" ) {
+			img.src = "http://stage.bookcountry.com/uploadedImages/Book_Country/Read_and_Review/Books/Genre_Map/Thriller/Suspense_Thriller/Suspense_Thriller_icon_Big.png";
+			img.alt= "suspense";
+		} else if (pelis[x].Genero == "Terror") {
+            img.src = "https://www.shareicon.net/data/128x128/2016/11/15/853877_food_512x512.png";
+            img.alt = "terror";
+        } else if (pelis[x].Genero == "Intriga") {
+            img.src = "http://wiki.dominionstrategy.com/images/c/cf/Intrigue_icon.png";
+            img.alt = "intriga";
+        } else if (pelis[x].Genero == "Drama") {
+            img.src = "https://cdn.onlinewebfonts.com/svg/img_318795.png";
+            img.alt = "drama";
+        }
+		li.appendChild(img);
+		ulObjectivo.appendChild(li);
+	}
+  </script>
+  </section>
+ </body>
+</html>
